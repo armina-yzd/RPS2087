@@ -1,6 +1,46 @@
 :root {
+  --blueGradiant:#3B2A9F;
+  --radio:#FA8305;
+  --blueGradiantlight:#6150bd;
+  --blueGradiantdark:#281d66;
+  
 }
 
 * {
   box-sizing: border-box;
+}
+
+.blueGradiant{
+  background-color: var(--blueGradiant);
+}
+.blueGradiantlight{
+  background-color: var(--blueGradiantlight);
+}
+.blueGradiantdark{
+  background-color: var(--blueGradiantdark);
+}
+
+
+
+.custom-radio input[type='radio'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--radio);
+  border-radius: 50%;
+  /* outline: none; */
+  
+}
+
+.custom-radio input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+
+.custom-radio input[type='radio']:checked:before {
+  background: white;
 }

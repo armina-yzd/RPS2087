@@ -1,17 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- styles -->
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="style\style.css">
     <!-- insert bootstrap link -->
+    <link rel="stylesheet" href="style\bootstrap\bootstrap.css">
     <!-- title -->
     <title>Rock Paper Scissor</title>
-  </head>
-  <body>
+</head>
+
+<body class="blueGradiant text-white ">
+    
+    <main class="text-center justify-content-center" style="padding-top:150px" id="menu">
+        <h1 class="my-5 fw-bolder">Rock Paper Scissors</h1>
+
+        <button onclick="singlemode()" class="blueGradiant text-white rounded-4 m-4 fw-bolder"
+            style="width: 200px; height:50px" type="button">SinglePlayer</button>
+        <button onclick="multimode()" class="blueGradiant text-white rounded-4 m-4 fw-bolder"
+            style="width: 200px; height:50px" type="button">MultiPlayer</button>
+    </main>
+
+
+
+    <main id="singleplayermode" style="display:none">
+
+        <div class="text-center pb-3">
+            <h3 class="fw-bolder my-5" id="state">Rock Paper Scissors</h3>
+            <h3 class="fw-bolder my-5" id="score">You 0:0 Ai</h3>
+            <h3 class="fw-bolder my-5" id="ai">Your Turn !</h3>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-3 text-center">
+                <img src="assets\images\paper.png" alt="paper">
+                <div class="my-4">
+                    <label class="custom-radio">
+
+                        <input type="radio" name="play" value="0" class="play" checked />
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-3 text-center">
+                <img src="assets\images\scissors.png" alt="scissors">
+                <div class="my-4">
+                    <label class="custom-radio">
+
+                        <input type="radio" name="play" value="1" class="play" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-3 text-center">
+                <img src="assets\images\rock.png" alt="rock">
+                <div class="my-4">
+                    <label class="custom-radio">
+
+                        <input type="radio" name="play" value="2" class="play" />
+                    </label>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <button onclick="myclick()" class="blueGradiant text-white rounded-4" style="width: 200px; height:50px"
+                    type="button">
+                    <h3 class="fw-bolder mt-1" id="gamestate">START</h3>
+                </button>
+            </div>
+        </div>
+    </main>
+
+
+    <main id="multiplayermode" style="display:none">
+        
+
+        <div class="text-center py-4">
+            <h3 class="fw-bolder my-5" id="multistate">Rock Paper Scissors</h3>
+            <h3 class="fw-bolder my-5" id="multiscore">Player 1 --- 0 : 0 --- Player 2</h3>
+        </div>
+        <div class="row justify-content-center">
+            <div class="row col-5 blueGradiantlight rounded-4 py-5 my-3">
+
+                <div class="col-4 text-center ">
+                    <img src="assets\images\paper.png" width="210px" alt="paper">
+                </div>
+
+                <div class="col-4 text-center">
+                    <img src="assets\images\scissors.png" width="210px" alt="scissors">
+                </div>
+
+                <div class="col-4 text-center">
+                    <img src="assets\images\rock.png" width="210px" alt="rock">
+                </div>
+                <div class="text-center mt-5">
+                    <h3 class="fw-bolder " id="player1">START</h3>
+                </div>
+
+            </div>
+            <div class="col-1"></div>
+
+            <div class="row col-5 blueGradiantdark rounded-4 py-5 my-3">
+
+                <div class="col-4 text-center">
+                    <img src="assets\images\paper.png" width="210px" alt="paper">
+                </div>
+
+                <div class="col-4 text-center">
+                    <img src="assets\images\scissors.png" width="210px" alt="scissors">
+                </div>
+
+                <div class="col-4 text-center">
+                    <img src="assets\images\rock.png" width="210px" alt="rock">
+                </div>
+                <div class="text-center mt-5">
+                    <h3 class="fw-bolder " id="player2">START</h3>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+
+
+
+
+    </main>
+
+
     <!-- scripts -->
     <script src="./script/main.js"></script>
-  </body>
+</body>
+
 </html>
